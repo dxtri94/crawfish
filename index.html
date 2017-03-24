@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="appCtrl">
+
+<head>
+    <title data-ng-bind="pageTitle"></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:url" content="{{ app.url }} " />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ app.name }}" />
+    <meta property="og:description" content="{{ app.description }}" />
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="src/assets/fonts/gotham/font.css">
+    <link rel="stylesheet" href="src/assets/css/style.css">
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+
+
+</head>
+
+<body>
+    <div ui-view="root" id="app" class="app" ng-class="{'app-header-fixed':app.settings.headerFixed, 'app-aside-fixed':app.settings.asideFixed, 'app-aside-folded':app.settings.asideFolded, 'app-aside-dock':app.settings.asideDock, 'container':app.settings.container}">
+        <div class="container-fluid">
+            <div class="text-center">
+                <h1 class="title">{{ app.name }}</h1>
+            </div>
+        </div>
+    </div>
+    <!--end footer-->
+    <script src="src/app.js"></script>
+    <script src="src/modules/modules.js"></script>
+    <script src="src/modules/slide/slide.js"></script>
+    <script src="src/modules/home/home.js"></script>
+    <script src="src/header/header.js"></script>
+    <script src="src/footer/footer.js"></script>
+    <script src="src/configs.js"></script>
+    <script src="src/constants.js"></script>
+    <script src="src/loggedIn.js"></script>
+</body>
+
+</html>
