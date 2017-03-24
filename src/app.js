@@ -1,14 +1,16 @@
 angular
     .module('app', [
         'ui.router',
+        'ui.bootstrap',
+
         'app.modules',
         'app.header',
         'app.footer',
-    'app.configs',
-    'app.constants',
-    'app.loggedIn'
+        'app.configs',
+        'app.constants',
+        'app.loggedIn'
 
-        ])
+    ])
     .config(config)
     .controller('appCtrl', appCtrl);
 config.$inject = ['$stateProvider', '$urlRouterProvider'];
@@ -16,7 +18,7 @@ config.$inject = ['$stateProvider', '$urlRouterProvider'];
 function config($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/home');
     $stateProvider
-        // Layout: Blanksource
+    // Layout: Blanksource
         .state('blank', {
             abstract: true,
             views: {
@@ -47,24 +49,24 @@ function config($stateProvider, $urlRouterProvider) {
         })
 }
 appCtrl.$inject = ['$scope'];
-function appCtrl($scope){
-      // settings application
-      $scope.pageTitle = "Rockin' Crawfish";
-      $scope.app = {
+function appCtrl($scope) {
+    // settings application
+    $scope.pageTitle = "Rockin' Crawfish";
+    $scope.app = {
         name: 'therockincrawfish',
         description: "",
         version: '1.0',
         support: 'support@mail.com',
         settings: {
-          themeID: 1,
-          navbarHeaderColor: 'bg-black',
-          navbarCollapseColor: 'bg-white-only',
-          asideColor: 'bg-black',
-          headerFixed: true,
-          asideFixed: true,
-          asideFolded: false,
-          asideDock: false,
-          container: false
+            themeID: 1,
+            navbarHeaderColor: 'bg-black',
+            navbarCollapseColor: 'bg-white-only',
+            asideColor: 'bg-black',
+            headerFixed: true,
+            asideFixed: true,
+            asideFolded: false,
+            asideDock: false,
+            container: false
         }
-      };
+    };
 }

@@ -12,7 +12,7 @@ function config($stateProvider) {
             views: {
                 'header': {
                     templateUrl: 'src/header/header.tpl.html',
-                    controller: 'HeaderController'
+                    controller: 'headerCtrl'
                 },
                 'middle-container': {
                     templateUrl: 'src/layouts/layout-middle-content.tpl.html'

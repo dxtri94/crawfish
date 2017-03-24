@@ -1,3 +1,131 @@
-.logo > img{
- margin: 0 auto;
+/*Format website display*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    background: url(../../assets/images/top-wrap.jpg) left top repeat-x #6a0719;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover, a:visited, a:focus, a:active {
+    text-decoration: none;
+}
+
+/*!end Format website display*/
+
+/*header*/
+.app-header {
+
+}
+
+.header {
+    background: url(../../assets/images/wooden-structure.jpg) no-repeat center top;
+    width: 100%;
+    background-size: contain;
+}
+
+.logo {
+    display: inline-block;
+    margin-left: 181px;
+}
+
+.logo > img {
+    margin: 0 auto;
+    border: none;
+    outline: none;
+}
+
+.tel-block {
+    display: inline-block;
+    font-family: 'gotham-book';
+    color: #ecdab2;
+    font-size: 15px;
+    background: url(../../assets/images/plate.jpg) no-repeat;
+    float: right;
+    margin-top: 106px;
+    margin-right: 17px;
+    padding: 7px;
+    background-size: cover;
+}
+
+.tel-block ul li > span {
+    color: #ffffff;
+}
+
+.top-wrapper {
+    background: url(../../assets/images/top.png) repeat-x;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 58px;
+}
+
+/*!- end header*/
+.menu {
+    background: url("../../assets/images/banner-holder.jpg") center no-repeat;
+    background-size: cover;
+    max-height: 425px;
+}
+
+.nav-custom {
+    margin: 0 auto;
+    float: none;
+    table-layout: fixed;
+    display: table;
+}
+
+/*responsive time*/
+@media (max-width: 320px) {
+    .logo {
+        margin-left: 59px;
+        width: 145px;
+        height: 46px;
+    }
 }

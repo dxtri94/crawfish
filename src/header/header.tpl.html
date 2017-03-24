@@ -1,35 +1,17 @@
-<div class="container">
-    <div class="row">
-        <div class="col-xs-8">
+<div class="header">
+    <div class="container">
+        <div class="top-wrapper"></div>
+        <div class="top">
             <div class="logo">
-                <img src="src/assets/images/logo.jpg" class="img-responsive" />
+                <img src="src/assets/images/logo.jpg" class="img-responsive"/>
             </div>
-        </div>
-        <div class="col-xs-4">
             <div class="tel-block">
                 <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
+                    <li ng-repeat="location in locationLists track by $index">
+                        <span>{{location.name}} : {{location.tel}}</span>
+                    </li>
                 </ul>
             </div>
         </div>
-
-    </div>
-
-    <div class="menu">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div>
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Locations</a></li>
-                        <li><a href="#">Job Opportunities</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
     </div>
 </div>
