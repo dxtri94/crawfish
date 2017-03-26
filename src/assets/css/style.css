@@ -1,17 +1,86 @@
 /*Format website display*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -20,9 +89,20 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
 
@@ -30,16 +110,20 @@ body {
     background: url(../../assets/images/top-wrap.jpg) left top repeat-x #6a0719;
 }
 
-ol, ul {
+ol,
+ul {
     list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
     quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
@@ -53,29 +137,32 @@ a {
     text-decoration: none;
 }
 
-a:hover, a:visited, a:focus, a:active {
+a:hover,
+a:visited,
+a:focus,
+a:active {
     text-decoration: none;
 }
 
+
 /*!end Format website display*/
 
-/*header*/
-.app-header {
 
-}
+/*header*/
+
+.app-header {}
 
 .header {
     background: url(../../assets/images/wooden-structure.jpg) no-repeat center top;
     width: 100%;
-    background-size: contain;
 }
 
 .logo {
     display: inline-block;
-    margin-left: 181px;
+    margin-left: 284px;
 }
 
-.logo > img {
+.logo>img {
     margin: 0 auto;
     border: none;
     outline: none;
@@ -89,12 +176,12 @@ a:hover, a:visited, a:focus, a:active {
     background: url(../../assets/images/plate.jpg) no-repeat;
     float: right;
     margin-top: 106px;
-    margin-right: 17px;
+    margin-right: 100px;
     padding: 7px;
     background-size: cover;
 }
 
-.tel-block ul li > span {
+.tel-block ul li>span {
     color: #ffffff;
 }
 
@@ -107,7 +194,9 @@ a:hover, a:visited, a:focus, a:active {
     height: 58px;
 }
 
+
 /*!- end header*/
+
 .menu {
     background: url("../../assets/images/banner-holder.jpg") center no-repeat;
     background-size: cover;
@@ -121,11 +210,78 @@ a:hover, a:visited, a:focus, a:active {
     display: table;
 }
 
+
 /*responsive time*/
+@media (max-width: 1200px) {
+    .logo{
+        margin-left: 185px;
+    }
+    .tel-block{
+        margin-right: 15px;
+    }
+}
+@media (max-width: 1024px) {
+    .logo{
+        margin-left: 183px;
+    }
+    .tel-block{
+        margin-right: 16px;
+    }
+}
+@media (max-width: 768px) {
+    .header{
+        background-size: cover;
+    }
+    .logo {
+        margin-left: 129px;
+        width: 431px;
+    }
+    .top-wrapper {
+        background-size: contain;
+        height: 20px;
+    }
+    .tel-block {
+        font-size: 11px;
+        margin-top: 104px;
+        margin-right: -12px;
+        padding: 2px;
+    }
+}
+
+@media (max-width: 736px) {
+    .logo {
+        margin-left: 72px;
+        width: 54%;
+    }
+    .top-wrapper {
+        background-size: contain;
+        height: 20px;
+    }
+    .tel-block {
+        font-size: 5px;
+        margin-top: 45px;
+        margin-right: 15px;
+        padding: 2px;
+    }
+}
+@media (max-width: 640px) {
+    .logo{
+        margin-left: 65 px;
+    }
+}
 @media (max-width: 320px) {
     .logo {
-        margin-left: 59px;
+        margin-left: 61px;
         width: 145px;
-        height: 46px;
+    }
+    .top-wrapper {
+        background-size: contain;
+        height: 20px;
+    }
+    .tel-block {
+        font-size: 4px;
+        margin-top: 34px;
+        margin-right: 17px;
+        padding: 2px;
     }
 }
