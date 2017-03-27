@@ -4,7 +4,7 @@
         <div class="top-wrapper"></div>
         <div class="top">
             <div class="logo">
-                <img src="src/assets/images/logo.jpg" class="img-responsive"/>
+                <img src="src/assets/images/logo.jpg" class="img-responsive" />
             </div>
             <div class="tel-block">
                 <ul>
@@ -20,23 +20,22 @@
 
 <!--silde and menu-->
 <!--menu-->
-<div class="menu-block">
-    <div class="container">
-        <div class="menu">
-            <nav class="navbar navbar-default">
-                <div>
-                    <ul class="nav navbar-nav nav-custom">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Locations</a></li>
-                        <li><a href="#">Job Opportunities</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+<div class="menu-block container">
+    <div class="menu">
+        <nav class="navbar navbar-default">
+            <div>
+                <ul class="nav navbar-nav nav-custom">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Job Opportunities</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
         <div class="slide">
-            <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+            <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" no-transition="false">
                 <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
                     <img ng-src="{{slide.image}}" style="margin:auto;">
                     <div class="carousel-caption">
@@ -49,5 +48,5 @@
     </div>
     <!--! end menu-->
     <!--end slide menu-->
-</div>
+
 </div>

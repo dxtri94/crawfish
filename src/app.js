@@ -2,7 +2,7 @@ angular
     .module('app', [
         'ui.router',
         'ui.bootstrap',
-
+        'ngAnimate',
         'app.modules',
         'app.header',
         'app.footer',
@@ -18,7 +18,7 @@ config.$inject = ['$stateProvider', '$urlRouterProvider'];
 function config($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/home');
     $stateProvider
-    // Layout: Blanksource
+        // Layout: Blanksource
         .state('blank', {
             abstract: true,
             views: {
@@ -49,6 +49,7 @@ function config($stateProvider, $urlRouterProvider) {
         })
 }
 appCtrl.$inject = ['$scope'];
+
 function appCtrl($scope) {
     // settings application
     $scope.pageTitle = "Rockin' Crawfish";

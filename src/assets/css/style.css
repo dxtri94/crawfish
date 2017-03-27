@@ -197,10 +197,9 @@ a:active {
 
 /*!- end header*/
 
-.menu {
+.menu-block {
     background: url("../../assets/images/banner-holder.jpg") center no-repeat;
     background-size: cover;
-    max-height: 425px;
 }
 
 .nav-custom {

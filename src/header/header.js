@@ -1,5 +1,7 @@
 angular
-    .module('app.header', [])
+    .module('app.header', [
+    'ui.bootstrap.carousel'
+])
     .controller('headerCtrl', headerCtrl)
 headerCtrl.$inject = ['$scope'];
 function headerCtrl($scope) {
@@ -17,7 +19,7 @@ function headerCtrl($scope) {
             tel : '(510) 230-4874'
         }
     ];
-    $scope.myInterval = 5000;
+    $scope.myInterval = 2500;
     $scope.noWrapSlides = false;
     $scope.active = 0;
     $scope.slides = [
