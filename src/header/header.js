@@ -20,57 +20,32 @@ function headerCtrl($scope) {
     $scope.myInterval = 5000;
     $scope.noWrapSlides = false;
     $scope.active = 0;
-    var slides = $scope.slides = [];
-    var currIndex = 0;
-
-    $scope.addSlide = function() {
-        var newWidth = 600 + slides.length + 1;
-        slides.push({
-            image: 'https://unsplash.it/200/300/?random' + newWidth + '/300',
-            text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
-            id: currIndex++
-        });
-    };
-
-    $scope.randomize = function() {
-        var indexes = generateIndexesArray();
-        assignNewIndexesToSlides(indexes);
-    };
-
-    for (var i = 0; i < 4; i++) {
-        $scope.addSlide();
-    }
-
-    // Randomize logic below
-
-    function assignNewIndexesToSlides(indexes) {
-        for (var i = 0, l = slides.length; i < l; i++) {
-            slides[i].id = indexes.pop();
+    $scope.slides = [
+        {
+            id : 0,
+            image : 'src/assets/images/slider/slider1.jpg',
+            name : 'name1'
+        },
+        {
+            id : 1,
+            image : 'src/assets/images/slider/slider2.jpg',
+            name : 'name2'
+        },
+        {
+            id : 2,
+            image : 'src/assets/images/slider/slider3.jpg',
+            name : 'name3'
+        },
+        {
+            id : 3,
+            image : 'src/assets/images/slider/slider4.jpg',
+            name : 'name4'
+        },
+        {
+            id : 4,
+            image : 'src/assets/images/slider/slider5.jpg',
+            name : 'name5'
         }
-    }
-
-    function generateIndexesArray() {
-        var indexes = [];
-        for (var i = 0; i < currIndex; ++i) {
-            indexes[i] = i;
-        }
-        return shuffle(indexes);
-    }
-
-    // http://stackoverflow.com/questions/962802#962890
-    function shuffle(array) {
-        var tmp, current, top = array.length;
-
-        if (top) {
-            while (--top) {
-                current = Math.floor(Math.random() * (top + 1));
-                tmp = array[current];
-                array[current] = array[top];
-                array[top] = tmp;
-            }
-        }
-
-        return array;
-    }
+    ];
 }
 
