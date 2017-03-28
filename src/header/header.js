@@ -19,7 +19,7 @@ function headerCtrl($scope) {
             tel : '(510) 230-4874'
         }
     ];
-    $scope.myInterval = 2500;
+    $scope.myInterval = 10000;
     $scope.noWrapSlides = false;
     $scope.active = 0;
     $scope.slides = [

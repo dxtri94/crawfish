@@ -197,9 +197,16 @@ a:active {
 
 /*!- end header*/
 
-.menu-block {
+/*menu and slide*/
+.navbar-default{
+    background: none;
+    border: none;
+}
+.menu {
     background: url("../../assets/images/banner-holder.jpg") center no-repeat;
-    background-size: cover;
+    background-size: contain;
+    height: 432px;
+    margin-top: -6px;
 }
 
 .nav-custom {
@@ -208,8 +215,48 @@ a:active {
     table-layout: fixed;
     display: table;
 }
+.nav-custom li > a{
+    font-size: 24px;
+    font-family: "gotham-bold"
+}
+.carousel-fix-img {
+    width: 57%;
+}
+.carousel-control.right {
+    right: 199px;
+}
+.carousel-control.left {
+    left: 191px;
+}
+.carousel-control.right,
+.carousel-control.left {
+    background: none;
+}
+.glyphicon-chevron-right:before {
+    content: url("../../assets/images/next.png");
+}
+.glyphicon-chevron-left:before {
+    content: url("../../assets/images/prev.png");
+}
+/*! end menu and slide*/
 
-
+/*content*/
+.content-top img {
+    margin:0 auto;
+}
+.content-middle{
+    background:url(../../assets/images/content-sec.jpg) no-repeat;
+    background-size: cover; 
+}
+.content-middle h1{
+    font-size: 28px;
+    color: #d71827;
+    text-align: center;
+    font-weight: normal;
+/*    background: url(..../assets/images/sep.jpg) no-repeat bottom left;*/
+    font-family: "gotham-book";
+}
+/*!end content*/
 /*responsive time*/
 @media (max-width: 1200px) {
     .logo{
