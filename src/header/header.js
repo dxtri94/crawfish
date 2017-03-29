@@ -17,6 +17,34 @@ function headerCtrl($scope) {
         {
             name: 'San Pablo',
             tel : '(510) 230-4874'
+        },
+        {
+            name: 'Graden grove',
+            tel : 0
+        },
+        {
+            name: 'Bakersfield',
+            tel : 0
+        },
+        {
+            name: 'Las Vegas',
+            tel : 0
+        },
+        {
+            name: 'Duluth',
+            tel : 0
+        },
+        {
+            name: 'Orlando',
+            tel : 0
+        },
+        {
+            name: 'Nguyen Huu Cau',
+            tel : 0
+        },
+        {
+            name: 'Le Thi Rieng',
+            tel : 0
         }
     ];
     $scope.myInterval = 10000;
@@ -50,4 +78,3 @@ function headerCtrl($scope) {
         }
     ];
 }
-
