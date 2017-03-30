@@ -203,8 +203,12 @@ a:active {
 .menu {
     background: url("../../assets/images/banner-holder.jpg") center no-repeat;
     background-size: contain;
-    height: 432px;
+    height: 420px;
     margin-top: -6px;
+}
+
+.nav-custom li {
+    padding-right: 38px;
 }
 
 .nav-custom {
@@ -214,13 +218,20 @@ a:active {
     display: table;
 }
 
-.nav li {
+.nav-custom li {
     display: inline-block;
 }
 
 .nav-custom li > a {
     font-size: 24px;
+    color: #6b0718;
     font-family: "gotham-bold"
+}
+.nav-custom li > a:hover{
+    color: #E42E27;
+}
+.slide {
+    margin-top: 18px;
 }
 
 .dropdown-custom:hover,
@@ -269,22 +280,11 @@ a:active {
 }
 
 .glyphicon-chevron-right:before {
-    /*content: url("../../assets/images/next.png");*/
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    content: "";
-    background: url("../../assets/images/next.png") no-repeat 0 0;
-    background-size: 100%;
+    content: url("../../assets/images/next.png");
 }
 
 .glyphicon-chevron-left:before {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    content: "";
-    background: url("../../assets/images/prev.png") no-repeat 0 0;
-    background-size: 100%;
+    content: url("../../assets/images/prev.png");
 }
 
 /*! end menu and slide*/
@@ -296,6 +296,7 @@ a:active {
 
 .content-middle-title {
     background: url(../../assets/images/content-sec.jpg) center no-repeat;
+    margin-top: -1px;
 }
 
 .content-middle-title h1 {
@@ -303,6 +304,8 @@ a:active {
     color: #d71827;
     text-align: center;
     font-family: "gotham-medium";
+    background: url(../../assets/images/sep.jpg) bottom no-repeat;
+    padding-bottom: 15px;
 }
 
 .content-middle-text-paragraph {
@@ -344,9 +347,12 @@ a:active {
     background-size: contain;
     max-width: 617px;
     max-height: 384px;
-    padding: 37px 0px 0px 29px;
+    padding: 32px 0px 26px 51px;
 }
-
+.content-middle-video .video iframe {
+    width: 520px;
+    height: 314px;s
+}
 /*!end content*/
 /*footer*/
 .img-footer img {
@@ -374,6 +380,18 @@ a:active {
     .tel-block {
         margin-right: 16px;
     }
+    .carousel-fix-img {
+        width: 82%;
+    }
+    .carousel-control.right {
+        right: 15px;
+    }
+    .carousel-control.left {
+        left: 4px;
+    }
+    .content-middle-text-paragraph p {
+        margin: -1px 100px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -396,6 +414,53 @@ a:active {
         margin-top: 104px;
         margin-right: -12px;
         padding: 2px;
+    }
+    .menu{
+        height: 346px;
+    }
+    .nav-custom li > a {
+        font-size: 19px;
+    }
+    .carousel-fix-img {
+        width: 89%;
+    }
+    .slide {
+        margin-top: 16px;
+    }
+    .carousel-control.right {
+        right: -15px;
+    }
+    .carousel-control.left {
+        left: -27px;
+    }
+    .content-middle-text-paragraph{
+        background-size: cover;
+    }
+    .content-middle-text-paragraph p {
+        margin: 0px 53px;
+    }
+    .content-middle-text-paragraph p {
+        font-size: 15px;
+        margin: 0px 53px;
+    }
+    .content-middle-title {
+        background-size: cover;
+    }
+    .content-middle-title h1 {
+        margin: 0px 95px;
+    }
+    .content-middle-video {
+        background-size: contain;
+    }
+    .content-middle-video .video {
+        padding: 30px 0px 21px 62px;
+    }
+    .content-middle-video .video iframe {
+        width: 496px;
+        height: 294px;
+    }
+    .img-footer{
+        margin: 0 24px
     }
 }
 
@@ -433,7 +498,6 @@ a:active {
 
     .nav-custom li > a {
         font-size: 8.5px;
-        color: #d71827;
     }
 
     .carousel-indicators {
@@ -448,16 +512,38 @@ a:active {
         left: 48px;
     }
 
+    .glyphicon-chevron-right:before {
+        /*content: url("../../assets/images/next.png");*/
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        content: "";
+        background: url("../../assets/images/next.png") no-repeat 0 0;
+        background-size: 100%;
+    }
+
+    .glyphicon-chevron-left:before {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        content: "";
+        background: url("../../assets/images/prev.png") no-repeat 0 0;
+        background-size: 100%;
+    }
+
     .slide {
         height: 110px;
+        margin-top: 0px;
     }
 
     .content-middle-title h1 {
         font-size: 14px;
+        margin: 0px 56px;
     }
 
     .content-middle-title {
         background-size: cover;
+        margin-top: 0px;
     }
 
     .content-middle-text-paragraph {
@@ -466,7 +552,7 @@ a:active {
 
     .content-middle-text-paragraph p {
         font-size: 7px;
-        margin: -1px 0;
+        margin: 0px 34px;
     }
 
     .content-middle-video {
@@ -481,6 +567,11 @@ a:active {
         height: 180px;
         width: 287px;
     }
+
+    .img-footer {
+        padding: 0 15px;
+    }
+
 }
 
 @media (max-width: 375px) {
@@ -491,26 +582,33 @@ a:active {
 
     .nav-custom li > a {
         font-size: 8px;
-        color: #d71827;
     }
 
     .slide {
         height: 96px;
     }
+
     .content-middle-text-paragraph p {
         font-size: 6.5px;
         margin: -1px 31px;
     }
+
     .content-middle-text-paragraph ul > li {
         font-size: 11px;
     }
+
     .content-middle-video .video {
         padding: 18px 0px 10px 52px;
     }
+
     .content-middle-video .video iframe {
         height: 136px;
         width: 239px;
     }
+    .content-middle-title h1 {
+        margin: 0px 43px;
+    }
+}
 
 @media (max-width: 360px) {
     .logo {
@@ -519,6 +617,9 @@ a:active {
 
     .slide {
         height: 96px;
+    }
+    .content-middle-title h1 {
+        margin: 0px 39px;
     }
 }
 
@@ -556,7 +657,6 @@ a:active {
 
     .nav-custom li > a {
         font-size: 6.5px;
-        color: #d71827;
     }
 
     .carousel-indicators {
@@ -574,4 +674,24 @@ a:active {
     .slide {
         height: 80px;
     }
+
+    .content-middle-title h1 {
+        font-size: 10px;
+    }
+
+    .content-middle-text-paragraph p {
+        font-size: 5.7px;
+        margin: 0px 28px;
+        text-align: center;
+    }
+
+    .content-middle-video .video {
+        padding: 10px 0px 3px 51px;
+    }
+
+    .content-middle-video .video iframe {
+        height: 119px;
+        width: 186px;
+    }
 }
+
