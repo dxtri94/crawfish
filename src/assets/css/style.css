@@ -351,10 +351,16 @@ a:active {
 }
 .content-middle-video .video iframe {
     width: 520px;
-    height: 314px;s
+    height: 314px;
 }
 /*!end content*/
 /*footer*/
+.app-footer{
+    background: url(../../assets/images/bottom-wrap.png) repeat-x;
+}
+.footer{
+    background: url(../../assets/images/bottom-wrap.png) no-repeat center;
+}
 .img-footer img {
     margin: 0 auto;
 }
@@ -460,7 +466,7 @@ a:active {
         height: 294px;
     }
     .img-footer{
-        margin: 0 24px
+        margin: 0 24px;
     }
 }
 
