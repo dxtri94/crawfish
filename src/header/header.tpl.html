@@ -1,67 +1,77 @@
-<!--header and logo-->
-<div class="header">
-    <div class="container">
-        <div class="top-wrapper"></div>
-        <div class="top">
-            <div class="logo">
-                <img src="src/assets/images/logo.jpg" class="img-responsive"/>
-            </div>
-            <div class="tel-block">
-                <ul>
-                    <li ng-repeat="location in locationLists track by $index">
-                        <span ng-if="location.tel != 0">{{location.name}} : {{location.tel}}</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<!--! end header and logo-->
-
-<!--silde and menu-->
-<!--menu-->
-<div class="menu">
-    <nav>
-        <div>
-            <ul id="ul-menu" class="nav-custom">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li class="dropdown dropdown-custom">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">Locations</a>
-                    <ul class="dropdown-menu">
-                        <li ng-repeat="location in locationLists track by $index">
-                            <a href="#">{{location.name}}</a>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#">Job Opportunities</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="slide">
-        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" no-transition="false">
-            <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                <img ng-src="{{slide.image}}" style="margin:0 auto;" class="carousel-fix-img img-responsive">
-                <div class="carousel-caption">
-                    <p>{{slide.text}}</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--<script>-->
-    <!--function checkWidth() {-->
-        <!--if ($(window).width() < 600) {-->
-            <!--$('#ul-menu').addClass('nav');-->
-        <!--} else {-->
-            <!--$('#ul-menu').removeClass('nav');-->
-        <!--}-->
-    <!--}-->
-    <!--$(window).resize(checkWidth);-->
-<!--</script>-->
-
-<!--! end menu-->
-<!--end slide menu-->
+<!--header and logo-->
+<div class="header">
+    <div class="container">
+        <div class="top-wrapper"></div>
+        <div class="top">
+            <div class="logo">
+                <img src="src/assets/images/logo.jpg" class="img-responsive"/>
+            </div>
+            <div class="tel-block">
+                <ul>
+                    <li ng-repeat="location in locationLists track by $index">
+                        <span ng-if="location.tel != 0">{{location.name}} : {{location.tel}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--! end header and logo-->
+
+<!--silde and menu-->
+<!--menu-->
+<div class="menu">
+    <nav>
+        <div>
+            <ul id="ul-menu" class="nav-custom">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li class="dropdown dropdown-custom">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Locations</a>
+                    <ul class="dropdown-menu">
+                        <!--<li ng-repeat="location in locationLists track by $index">-->
+                        <!--<a href="../">{{location.name}}</a>-->
+                        <!--</li>-->
+                        <li><a ui-sref="loggedIn.modules.location.oakland">Oakland, CA</a></li>
+                        <li><a ui-sref="loggedIn.modules.location.oakland">Concord, CA</a></li>
+                        <li><a ui-sref="loggedIn.modules.location.oakland">San Pablo, CA</a></li>
+                        <li><a ui-sref="loggedIn.modules.location.oakland">Graden grove, CA</a></li>
+                        <li><a ui-sref="loggedIn.modules.location.oakland">Bakersfield, CA</a></li>
+                        <li><a ui-sref="loggedIn.modules.location.oakland">Las Vegas, NY</a></li>
+                        <li><a ui-sref="loggedIn.modules.location.oakland">Duluth, GA</a></li>
+                        <li><a ui-sref="loggedIn.modules.location.oakland">Orlando, FL</a></li>
+                        <li><a ui-sref="loggedIn.modules.location.oakland">Nguyen Huu Cau, Viet Nam</a></li>
+                        <li><a ui-sref="loggedIn.modules.location.oakland">Le Thi Rieng, Viet Nam</a></li>
+                    </ul>
+                </li>
+                <li><a ui-sref="loggedIn.modules.job">Job Opportunities</a></li>
+                <li><a ui-sref="loggedIn.modules.contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="slide">
+        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" no-transition="false">
+            <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                <img ng-src="{{slide.image}}" style="margin:0 auto;" class="carousel-fix-img img-responsive">
+                <div class="carousel-caption">
+                    <p>{{slide.text}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<script>-->
+<!--function checkWidth() {-->
+<!--if ($(window).width() < 600) {-->
+<!--$('#ul-menu').addClass('nav');-->
+<!--} else {-->
+<!--$('#ul-menu').removeClass('nav');-->
+<!--}-->
+<!--}-->
+<!--$(window).resize(checkWidth);-->
+<!--</script>-->
+
+<!--! end menu-->
+<!--end slide menu-->

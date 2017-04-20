@@ -1,9 +1,9 @@
-angular.module('app.constants', [])
-
-  .constant('Constants', {
-    baseURL: function () {
-      return '';
-    }
-  })
-;
-
+angular.module('app.constants', [])
+
+  .constant('Constants', {
+    baseURL: function () {
+      return '';
+    }
+  })
+;
+

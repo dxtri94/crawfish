@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="content-top">
+        <img src="src/assets/images/content-top.jpg" class="img-responsive">
+    </div>
+    <div class="content-middle">
+        <div class="content-middle-title">
+            <h1>CONTACT US</h1>
+        </div>
+        <div class="content-middle-text">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="content-middle-text-paragraph">
+                        <p>
+                            If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="content-middle-text-paragraph contact-custom">
+                        <div class="">
+                            <div id="messages" class="alert alert-success" data-ng-show="messages" data-ng-bind="messages"></div>
+                            <div data-ng-show="progress.active()" style="color: red; font-size: 50px;">Sending…</div>
+                            <form name="helpForm" novalidate role="form">
+                                <div class="form-group">
+                                    <label for="name">Your Name </label>
+                                    <span class="label label-danger label-custom" data-ng-show="submitted && helpForm.name.$error.required">Required!</span>
+                                    <input type="text" name="name" data-ng-model="name" class="form-control" required />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Your E-mail address</label>
+                                    <span class="label label-danger label-custom" data-ng-show="submitted && helpForm.email.$error.required">Required!</span>
+                                    <span class="label label-danger label-custom" data-ng-show="submitted && helpForm.$error.email">Invalid email!</span>
+                                    <input type="email" name="email" data-ng-model="email" class="form-control" required />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="subject">Your Subject </label>
+                                    <span class="label label-danger label-custom" data-ng-show="submitted && helpForm.subject.$error.required">Required!</span>
+                                    <input type="text" name="subject" data-ng-model="subject" class="form-control" required />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="comments">Body</label>
+                                    <span class="label label-danger label-custom" data-ng-show="submitted && helpForm.comments.$error.required">Required!</span>
+                                    <textarea name="comments" data-ng-model="comments" class="form-control" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Verification Code</label>
+                                    <div re-captcha ng-model="user.captcha"></div>
+                                </div>
+                                <button data-ng-disabled="progress.active()" data-ng-click="submit(helpForm)" class="btn btn-contact">
+                                    Submit
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
